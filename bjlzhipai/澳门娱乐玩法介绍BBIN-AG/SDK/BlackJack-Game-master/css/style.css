@@ -1,0 +1,425 @@
+body {
+    position: relative;
+    width: 1366px;
+    margin: 0 auto;
+    padding: 0;
+}
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.main {
+    width: 1015px;
+    height: 559px;
+    margin: 0 auto;
+    position: relative;
+}
+.bgImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+#table-board {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+    vertical-align: middle;
+}
+#banker, #player  {
+    width: 83px;
+    height: 83px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 83px;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 微软雅黑;
+    color: white;
+    background-image: url("../image/player.jpg");
+    -webkit-border-radius: 43px;
+    -moz-border-radius: 43px;
+    border-radius: 43px;
+}
+.otherPlayer {
+    display: inline-table;
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+ul {
+    margin: 0 auto;
+    padding: 0px;
+}
+ul li {
+    cursor: pointer;
+    list-style: none;
+    float: left;
+}
+.bankerArea {
+    height: 43%;
+    width: 100%;
+}
+.playerArea {
+    height: 57%;
+    width: 100%;
+}
+.chipArea span {
+    font-family: 微软雅黑;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    line-height: 1.2em;
+}
+.smCoin {
+    display: inline-table;
+    vertical-align: middle;
+}
+.smCoin img {
+    width: 1em;
+    height: 1em;
+}
+.chipArea p > span {
+    border: solid 1px white;
+}
+.scoreArea span {
+    font-family: 微软雅黑;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 5px 25px;
+}
+.chip {
+    margin-top: 5px;
+}
+.chip ul {
+    width: 220px;
+    height: 45px;
+    padding-top: 5px;
+}
+.chip ul li {
+    margin-left: 28px;
+    width: 35px;
+    height: 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+#playerCards {
+    height: 80px;
+    align-items: center;
+}
+.bankerCards {
+    height: 80px;
+    align-items: center;
+    margin-top: 10px;
+}
+#playerCards ul, #bankerCards {
+    display: table;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+#playerCards ul li, #bankerCards li {
+    display: inline;
+    width: 60px;
+    height: 80px;
+    position: relative;
+    /*border: solid 1px black;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    background-color: brown;*/
+}
+#playerCards ul li img, #bankerCards li img {
+    width: 60px;
+    height: 80px;
+    -webkit-box-shadow:  -2px 2px 2px #333333;
+    -moz-box-shadow:  -2px 2px 2px #333333;
+    box-shadow:  -2px 2px 2px #333333;
+}
+.newGameArea {
+    float: left;
+}
+#playerMoney {
+    font-weight: bold;
+    color: #fed945;
+    font-size: 25px;
+    display: inline-table;
+    vertical-align: middle;
+}
+.bgCoin {
+    display: inline-table;
+}
+.bgCoin img {
+    width: 33px;
+    height: 33px;
+    vertical-align: middle;
+    border-radius: 20px;
+}
+#buttonArea {
+    line-height: 80px;
+    width: 1021px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    background-image: url("../image/btnAreaBg.jpg");
+    background-size: 1021px 80px;
+}
+#buttonArea p {
+    margin: 0;
+    padding: 0;
+    height: 80px;
+}
+#buttonArea p button {
+    color: #bd7126;
+    font-weight: bold;
+    font-family: 微软雅黑;
+    line-height: 1.5em;
+}
+#newGame {
+    cursor: pointer;
+    width: 109px;
+    height: 48px;
+    background-image: url("../image/playBtn.png");
+    padding: 0;
+    border: 0;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+.normalBtn {
+    cursor: pointer;
+    width: 68px;
+    height: 30px;
+    background-color: #ffe67f;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-left: 5px solid #fefe9b;
+    border-top: 5px solid #fefe9b;
+    border-right: 4px solid #fba94f;
+    border-bottom: 4px solid #fba94f;
+}
+.btn-disabled {
+    opacity: 0.7;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+}
+#mask {
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     width: 100%;
+     height: 100%;
+     background-color: black;
+     opacity: 0.5;
+     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+     z-index: 20;
+ }
+#dialog {
+    width: 500px;
+    height: 340px;
+    background-size: 500px 340px;
+    position: absolute;
+    display: none;
+    z-index: 30;
+}
+#chipDialog {
+    top: 0;
+    left:0;
+    width: 226px;
+    height: 200px;
+    position: absolute;
+    display: none;
+    z-index: 40;
+}
+#chipBtn {
+    position: absolute;
+    left: 50%;
+    width: 122px;
+    height: 122px;
+    border-radius: 70px;
+    margin-left: -61px;
+    z-index: 41;
+}
+#chipBtn image {
+    width: 122px;
+    height: 122px;
+}
+.chipDiaContent {
+    background-image: url("../image/chipModal.png");
+    position: absolute;
+    bottom: 0;
+    width: 226px;
+    height: 158px;
+}
+.chipDiaContent p {
+    font-family: 微软雅黑;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkgreen;
+    margin-top: 50%;
+}
+#startDialog {
+    position: absolute;
+    top: 0;
+    left: 175.5px;
+    width: 1015px;
+    height: 559px;
+    background-image: url("../image/startBg.png");
+    background-size: 1015px 559px;
+    margin: 0 auto;
+    z-index: 25;
+}
+@keyframes enterAnim {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(7deg);
+        -moz-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        -o-transform: rotate(7deg);
+        transform: rotate(7deg);
+    }
+    75% {
+        -webkit-transform: rotate(-7deg);
+        -moz-transform: rotate(-7deg);
+        -ms-transform: rotate(-7deg);
+        -o-transform: rotate(-7deg);
+        transform: rotate(-7deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+#enterGameBtn {
+    cursor: pointer;
+    position: absolute;
+    display: inline;
+    text-align: center;
+    line-height: 101px;
+    font-size: 40px;
+    font-family: 微软雅黑;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 0.3em;
+    top: 175px;
+    left: 50%;
+    margin-left: -194px;
+    height: 101px;
+    width: 387px;
+    background-image: url("../image/enterBtnGg.png");
+    -webkit-animation: enterAnim 4s linear infinite;
+    -o-animation: enterAnim 4s linear infinite;
+    animation: enterAnim 4s linear infinite;
+}
+#gameRuleBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 355px;
+    left: 402px;
+    font-size: 45px;
+    font-family: 微软雅黑;
+    font-weight: bolder;
+    color: #bd7126;
+    letter-spacing: 0.3em;;
+}
+#gameRule {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 1015px;
+    z-index: 28;
+}
+.ruleTitle {
+    position: relative;
+    background-color: #385b24;
+    font-size: 30px;
+    height: 44px;
+    line-height: 44px;
+    font-weight: bolder;
+    font-family: 华文行楷;
+    color: white;
+    padding-left: 20px;
+}
+#closeRuleBtn {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: 43px;
+    height: 44px;
+    background-image: url("../image/closeRuleBtn.png");
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: left 0.35s linear, -webkit-transform 0.35s linear;
+    -moz-transition: left 0.35s linear, -moz-transform 0.35s linear;
+    -ms-transition: left 0.35s linear, -ms-transform 0.35s linear;
+    -o-transition: left 0.35s linear, -o-transform 0.35s linear;
+    transition: left 0.35s linear, transform 0.35s linear;
+}
+#closeRuleBtn:hover {
+    right: 10px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.ruleContent {
+    height: 280px;
+    background-image: url("../image/ruleContentBg.jpg");
+    background-size: 1015px 280px;
+}
+.ruleContent p {
+    color: rgba(28, 29, 40, 0.91);
+    font-weight: bold;
+    font-family: 微软雅黑;
+    text-indent: 2em;
+    line-height: 1.4em;
+    padding: 2em 1em;
+    text-align: left;
+    margin: 0;
+}
+.font-warning {
+    font-size: 24px;
+    color: red;
+}
+.font-success {
+    font-size: 24px;
+    color: cyan;
+}
+.font-fail {
+    font-size: 24px;
+    color: burlywood;
+}
+p {
+    text-align: center;
+}

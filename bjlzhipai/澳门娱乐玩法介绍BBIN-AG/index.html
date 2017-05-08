@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>蜘蛛纸牌</title>
+    <link rel="stylesheet" type="text/css" href="lib/Spider.css">
+</head>
+<body>
+    <div id="main">
+        <div id="bar">
+            <span>步骤：<cite id="step">0</cite></span>
+            <span>时间：<cite id="score">0</cite></span>
+            <span class="record"><a>游戏记录</a></span>
+            <input id="playBtn" type="button" value="开始" />
+            <input id="undoBtn" type="button" value="后退" />
+        </div>
+        <div id="pop">
+            <div class="win">
+                <p>恭喜您赢了！</p>
+                <input id="replayBtn" type="button" value="再来一盘" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="lib/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="lib/Spider.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        window.s = new Spider();
+        $("#playBtn").bind("click", function() {
+            if(this.value==="开始"){
+                s.start();
+                this.value = "重新开始";
+            }else{
+                s.replay();
+            }
+        });
+        $("#undoBtn").bind("click", function() {
+            s.undo(s);
+        });
+        $("#replayBtn").bind("click", function() {
+            s.replay();
+        });
+    });
+    </script>
+</body>
+</html>
