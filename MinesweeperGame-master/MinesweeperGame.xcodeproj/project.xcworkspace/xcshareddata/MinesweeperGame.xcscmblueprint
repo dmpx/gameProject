@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AF3DF7C84761D385E9582B14E8CD7BABD80EC8D8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AF3DF7C84761D385E9582B14E8CD7BABD80EC8D8" : 0,
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D5E839BA-8725-4710-9CF8-9DEBE0CBFAAA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AF3DF7C84761D385E9582B14E8CD7BABD80EC8D8" : "MinesweeperGame\/",
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MinesweeperGame",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MinesweeperGame.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JoanLeeo\/MinesweeperGame.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AF3DF7C84761D385E9582B14E8CD7BABD80EC8D8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AFNetworking\/AFNetworking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8"
+    }
+  ]
+}
