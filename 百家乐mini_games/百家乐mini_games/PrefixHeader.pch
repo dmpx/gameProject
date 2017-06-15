@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  百家乐mini_games
+//
+//  Created by 二哈 on 17/4/7.
+//  Copyright © 2017年 二哈. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "M13ProgressViewRing.h"
+#import "Masonry.h"
+#import "PXGetDataTool.h"
+#import "sizeWithString.h"
+#import "ProgressHUD.h"
+#import "KVNProgress.h"
+#import "ScottAlertView.h"
+#import "WKProgressHUD.h"
+#import "ScottAlertController.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define HEIGHT  [UIScreen mainScreen].bounds.size.height / 667//适配用
+#define WIDth   [UIScreen mainScreen].bounds.size.width / 375
+#define kMainBoundsHeight   ([UIScreen mainScreen].bounds).size.height //屏幕的高度
+#define kMainBoundsWidth    ([UIScreen mainScreen].bounds).size.width //屏幕的宽度
+
+#define APPKEY @"58ec8b03734be46ae70010c2"
+#define SECRET @"jcvulwjq6dbf7rl7di0px5iskxsrjrfs"
+#define COMPANYURL @"http://169.56.130.9/index/index/"
+#define COMPANYPARA @{@"app_id":@"12254934981"}
+#endif /* PrefixHeader_pch */
