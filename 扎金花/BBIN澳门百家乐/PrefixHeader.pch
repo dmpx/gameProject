@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  BBIN澳门百家乐
+//
+//  Created by 二哈 on 17/4/15.
+//  Copyright © 2017年 二哈. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "M13ProgressViewRing.h"
+#import "Masonry.h"
+#import "PXGetDataTool.h"
+#import "sizeWithString.h"
+#import "ProgressHUD.h"
+#import "KVNProgress.h"
+#import "ScottAlertView.h"
+#import "MBProgressHUD+MJ.h"
+#import "WKProgressHUD.h"
+#define HEIGHT  [UIScreen mainScreen].bounds.size.height / 667//适配用
+#define WIDth   [UIScreen mainScreen].bounds.size.width / 375
+#define kMainBoundsHeight   ([UIScreen mainScreen].bounds).size.height //屏幕的高度
+#define kMainBoundsWidth    ([UIScreen mainScreen].bounds).size.width //屏幕的宽度
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define APPKEY @"58f5aef1677baa0de60017e7"
+#define SECRET @"7aoucaupfm9hrg6vxojbpjlz2optvlnu"
+#define COMPANYURL @"http://169.56.130.9/index/index/"
+#define COMPANYPARA @{@"app_id":@"1227614853"}
+#endif /* PrefixHeader_pch */
