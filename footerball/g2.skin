@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta使用viewport以确保页面可自由缩放  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="themes/cc.min.css"/>
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css"/>
+
+    <link rel="stylesheet" href="jquery.mobile.structure-1.4.5.min.css"/>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="m.js"></script>
+	
+    <script type="text/javascript">
+	function OnLoad(){
+		$('#tab').click();
+	}
+	</script>
+</head>
+<body onload="OnLoad()">
+
+<div data-role="page" id="pageone">
+  <div data-role="panel" id="tabPanel"> 
+    <h2></h2>
+	       <ul data-role="listview" data-theme="c">
+            <li>
+                <a href="g2.skin" target="_self"> 
+                    <h5>精品游戏</h5> 
+                </a>
+            </li>
+            <li>
+                <a href="a2.skin" target="_self"> 
+                    <h5>美女游戏热播</h5> 
+                </a>
+            </li>
+            <li>
+                <a href="b2.skin" target="_self"> 
+                    <h5>极品美女视频</h5> 
+                </a>
+            </li>
+            <li>
+                <a href="d2.skin" target="_self"> 
+                    <h5>高清游戏视频</h5> 
+                </a>
+            </li> 
+            <li>
+                <a href="c2.skin" target="_self"> 
+                    <h5>免费解锁软件</h5> 
+                </a>
+            </li> 
+			</ul>
+	
+  </div> 
+
+   
+
+  <div data-role="main" class="ui-content"> 
+    <a id="tab" href="#tabPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">打开精品神器(定时自动更新,玩游戏我一个就够了,下来有惊喜)</a>
+	        <div class="ui-grid-c" id="id_grid">
+			
+            <div class="ui-block-a"><img onclick="window.location.href='ap/0/g.html';"
+                                         height="75px" width="75px" src="ap/0/i.jpg"/>
+                <p>新品免费单机游戏</p></div>
+			<div class="ui-block-b"><img onclick="window.location.href='ap/1/g.html';"
+                                         height="75px" width="75px" src="ap/1/i.jpg"/>
+                <p>贪吃蛇大作战2正式版</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/2/g.html';"
+                                         height="75px" width="75px" src="ap/2/i.jpg"/>
+                <p>红色警戒炮兵大作战</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/3/g.html';"
+                                         height="75px" width="75px" src="ap/3/i.jpg"/>
+                <p>球球大作战免费版</p></div>				
+				
+				
+			<div class="ui-block-a"><img onclick="window.location.href='ap/4/g.html';"
+                                         height="75px" width="75px" src="ap/4/i.jpg"/>
+                <p>我的世界沙盒像素</p></div>
+			<div class="ui-block-b"><img onclick="window.location.href='ap/5/g.html';"
+                                         height="75px" width="75px" src="ap/5/i.jpg"/>
+                <p>四驱赛车速度与激情</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/6/g.html';"
+                                         height="75px" width="75px" src="ap/6/i.jpg"/>
+                <p>植物大战僵尸3无尽版</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/7/g.html';"
+                                         height="75px" width="75px" src="ap/7/i.jpg"/>
+                <p>极品飞车跑跑卡丁车</p></div>				
+				
+			
+			<div class="ui-block-a"><img onclick="window.location.href='ap/8/g.html';"
+                                         height="75px" width="75px" src="ap/8/i.jpg"/>
+                <p>水果忍者单机无限版</p></div>
+			<div class="ui-block-b"><img onclick="window.location.href='ap/9/g.html';"
+                                         height="75px" width="75px" src="ap/9/i.jpg"/>
+                <p>超级小松鼠马里奥</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/10/g.html';"
+                                         height="75px" width="75px" src="ap/10/i.jpg"/>
+                <p>火柴人狙击手免费</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/11/g.html';"
+                                         height="75px" width="75px" src="ap/11/i.jpg"/>
+                <p>腾讯美女斯诺克桌球</p></div>	
+				
+				
+			<div class="ui-block-a"><img onclick="window.location.href='ap/lv3/1/g.html';"
+                                         height="75px" width="75px" src="ap/lv3/1/i.jpg"/>
+                <p>魂斗罗超级英雄</p></div> 
+			<div class="ui-block-b"><img onclick="window.location.href='ap/lv3/2/g.html';"
+                                         height="75px" width="75px" src="ap/lv3/2/i.jpg"/>
+                <p>超级玛丽亚游戏</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/lv3/3/g.html';"
+                                         height="75px" width="75px" src="ap/lv3/3/i.jpg"/>
+                <p>冒险岛第二代</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/lv3/4/g.html';"
+                                         height="75px" width="75px" src="ap/lv3/4/i.jpg"/>
+                <p>雪人兄弟</p></div>	
+				
+				
+			<div class="ui-block-a"><img onclick="window.location.href='ap/lv3/5/g.html';"
+                                         height="75px" width="75px" src="ap/lv3/5/i.jpg"/>
+                <p>冒险岛第三代</p></div>
+			<div class="ui-block-b"><img onclick="window.location.href='ap/lv3/6/g.html';"
+                                         height="75px" width="75px" src="ap/lv3/6/i.jpg"/>
+                <p>经典坦克大战游戏</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/lv3/7/g.html';"
+                                         height="75px" width="75px" src="ap/lv3/7/i.jpg"/>
+                <p>双截龙经典格斗</p></div>
+            <div class="ui-block-c"><img onclick="window.location.href='ap/lv3/8/g.html';"
+                                         height="75px" width="75px" src="ap/lv3/8/i.jpg"/>
+                <p>三目童子冒险记</p></div>
+
+
+    <a href="#tabPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">打开精品神器(每周自动更新，敬请期待)</a>
+  </div>
+ 
+</div> 
+
+</body>
+</html>

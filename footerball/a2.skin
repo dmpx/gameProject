@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <title>视频</title>
+    <meta charset="UTF-8">
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="themes/cc.min.css"/>
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css"/>
+
+    <link rel="stylesheet" href="jquery.mobile.structure-1.4.5.min.css"/>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+
+
+    <script src="m.js"></script>
+    <script type="text/javascript">
+        function getHeight() {
+
+            scroll(0, 0);
+            var header = $("#c_header");
+            var footer = $("#c_footer");
+            var viewport_height = $(window).height();
+
+            var content_height = viewport_height - header.outerHeight() - footer.outerHeight();
+            return content_height + 99;
+
+        }
+        function load() {
+            $('#c_iframe').attr("height", getHeight());
+        }
+    </script>
+</head>
+<body onload="load()">
+<div data-role="page" id="pagemain">
+    <div data-role="header" id="c_header">
+    </div>
+    <div data-role="main" id="c_main">
+		<ul data-role="listview" data-theme="a">
+            <li>
+                <a href="g2.skin" style="color:#ff0000">点击返回，下拉观看更多精彩视频</a>
+            </li>
+        </ul>
+        <iframe id="c_iframe"
+                src="https://sv.baidu.com/#/index/meizhi?_k=ex5t3e"
+                frameborder="0"
+                style="margin-top: -99px;"
+                width="100%"
+                height="1000px">
+        </iframe>
+    </div>
+    <!--<div data-role="footer" data-position="fixed" id="c_footer">-->
+        <!--<div data-role="navbar">-->
+            <!--<ul>-->
+                <!--<li><a href="g2.skin" data-theme="b" data-icon="grid">推荐</a></li>-->
+                <!--<li><a href="a2.skin" data-theme="b" data-icon="heart">极品</a></li>-->
+                <!--<li><a href="b2.skin" data-theme="b" class="ui-btn-active ui-state-persist" data-icon="star">热门</a></li>-->
+                <!--<li><a href="c2.skin" data-theme="b" data-icon="lock">解锁</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+</body>
+</html>

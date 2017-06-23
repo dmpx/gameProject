@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>首页推荐</title>
+    <meta charset="UTF-8">
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="themes/cc.min.css"/>
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css"/>
+
+    <link rel="stylesheet" href="jquery.mobile.structure-1.4.5.min.css"/>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="m.js"></script>
+    <style>
+        .div_img {
+            width: 100%;
+            height: 150px;
+        }
+
+        .img_view {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div data-role="page" id="pagemain">
+    <div data-role="header">
+    </div>
+    <div data-role="main">
+        <ul data-role="listview" data-theme="a">
+            <li>
+                <a href="g2.skin" style="color:#ff0000">定时更新，点击返回，下拉观看更多精彩视频</a>
+            </li>
+        </ul>
+        <div class="div_img">
+            <img class="img_view" src="ap/vg/b1.jpg">
+        </div>
+        <ul data-role="listview" data-theme="a">
+            <li>
+                <a href="https://sv.baidu.com/#/index/youxi?_k=cftxjr" target="_self">
+                    <img src="ap/vg/b1/1.jpg">
+                    <h5>经典高清游戏视频</h5>
+                    <p>酷炫狂拽吊炸天游戏技巧视频坐等你来膜拜!
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="https://sv.baidu.com/?entry=videoChannel/#/combine/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80?_k=wxnt22"
+                   target="_self">
+                    <img src="ap/vg/b1/2.jpg">
+                    <h5>王者荣耀，5杀王者归来</h5>
+                    <p>王者荣耀最新攻略在线视频,虎牙九日,斗鱼游弋,触手捕梦等你来跪拜!
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="https://sv.baidu.com/?entry=videoChannel/#/combine/%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F?_k=dm3cuf"
+                   target="_self">
+                    <img src="ap/vg/b1/3.jpg">
+                    <h5>英雄联盟视频，LOL就是爽</h5>
+                    <p>小智，王思聪，林更新，暴怒秒杀对手，开黑逆天精彩视频不容错过!
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="https://sv.baidu.com/?entry=videoChannel/#/combine/cf%E6%89%8B%E6%B8%B8?_k=3ebzjc"
+                   target="_self">
+                    <img src="ap/vg/b1/4.jpg">
+                    <h5>穿越火线CF最新实用视频</h5>
+                    <p>穿越火线CF最新实用视频，各种开黑各种神迹精彩视频看不停!
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="https://sv.baidu.com/?entry=videoChannel/#/combine/%E6%B8%B8%E6%88%8F%E8%A7%A3%E8%AF%B4?_k=zbyd8s"
+                   target="_self">
+                    <img src="ap/vg/b1/5.jpg">
+                    <h5>牛逼主播精彩游戏视频解说</h5>
+                    <p>各大类主要游戏解说，名主播无限酷炫技巧等你来围观，吃瓜群众!
+                    </p>
+                </a>
+            </li>
+        </ul>
+
+
+        <div class="div_img">
+            <img class="img_view" src="ap/vg/b2.jpg">
+        </div>
+
+        <ul data-role="listview" data-theme="a">
+            <li>
+                <a href="https://sv.baidu.com/#/?_k=wu7ho9" target="_self">
+                    <h5 style="color:#0000ff">王尼玛推荐观看逗逼视频</h5>
+                    <p>我们都爱看王尼玛推荐观看逗逼开心视频!
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="https://sv.baidu.com/#/index/doubiju?_k=tnoo4x" target="_self">
+                    <h5 style="color:#ff0000">搞笑无节操二货视频</h5>
+                    <p>整蛊专家，最新搞笑无节操二货视频的你来high!
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="https://sv.baidu.com/#/index/aishenghuo?_k=paa7ni" target="_self">
+                    <h5>生活极品搞怪视频</h5>
+                    <p>生活极品搞怪视频，精彩不断，休闲比看好视频!
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="http://zzd.sm.cn/webapp/xiss-search?query=%E6%90%9E%E7%AC%91%E8%A7%86%E9%A2%91" target="_self">
+                    <h5>王大锤乐呵呵无厘头</h5>
+                    <p>王大锤乐呵呵无厘头整蛊搞笑视频免费看!
+                    </p>
+                </a>
+            </li>
+
+            <li>
+                <a href="http://zzd.sm.cn/webapp/xiss-search?query=%E6%95%B4%E8%9B%8A%E8%A7%86%E9%A2%91" target="_self">
+                    <h5 style="color:#ff0000">中日韩超级整蛊视频在线看</h5>
+                    <p>中日韩超级整蛊视频在线看无厘头搞笑视频快来看!
+                    </p>
+                </a>
+            </li>
+        </ul>
+        <div class="div_img">
+            <img class="img_view" src="ap/vg/b3.jpg">
+        </div>
+        <ul data-role="listview" data-theme="a">
+            <li>
+                <a href="http://activity.renren.com/home?from=edm&edmstyle=1#homepage" target="_self">
+                    <h5>人人爱美女直播在线</h5>
+                    <p>人人在线，美女爱直播热线等你哦
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="https://sv.baidu.com/#/index/meizhi?_k=ex5t3e" target="_self">
+                    <h5 style="color:#ff0000">宅男午夜视频</h5>
+                    <p>宅男午夜寂寞无聊必备视频神器
+                    </p>
+                </a>
+
+            </li>
+            <li>
+                <a href="http://www.meipai.com/" target="_self">
+                    <h5>极品快播看视频</h5>
+                    <p>热门美女帅哥-美美酷酷热火视频
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.meipai.com/" target="_self">
+                    <h5>极品快播看视频</h5>
+                    <p>热门美女帅哥-美美酷酷热火视频
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="http://zzd.sm.cn/webapp/xiss-search?query=%E7%BE%8E%E5%A5%B3%E4%B8%BB%E6%92%AD%E8%A7%86%E9%A2%91"
+                   target="_self">
+                    <h5 style="color:#ff0000">美女神主播</h5>
+                    <p>精选美女主播在线等你免费来观赏
+                    </p>
+                </a>
+
+            </li>
+            <li>
+                <a href="http://zzd.sm.cn/webapp/xiss-search?query=%E5%A5%B3%E4%B8%BB%E6%92%AD%E8%A7%86%E9%A2%91"
+                   target="_self">
+                    <h5 style="color:#ff0000">在线女神美女艺术</h5>
+                    <p>在线女神们表演艺术，等司机开车观赏
+                    </p>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="http://m.miaopai.com/miaopai/plaza?cateid=132" target="_self">
+                    <h5>清纯美女自拍</h5>
+                    <p>一大波清纯美女自拍视频，宅男必看
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="https://sv.baidu.com/#/?_k=j4779u" target="_self">
+                    <h5>极品推荐恶搞美女视频</h5>
+                    <p>一大波极品推荐恶搞美女视频，宅男快来
+                    </p>
+                </a>
+            </li>
+
+            <li>
+                <a href="http://zzd.sm.cn/webapp/xiss-search?query=%E8%BD%A6%E6%A8%A1%E8%A7%86%E9%A2%91" target="_self">
+                    <h5 style="color:#ff0000">高大上美女车模</h5>
+                    <p>高挑上档次各地美女车模，模特艺术鉴赏
+                    </p>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="http://m.miaopai.com/miaopai/plaza?cateid=124" target="_self">
+                    <h5>明星外围八卦</h5>
+                    <p>一二三线明星外围女轨八卦视频
+                    </p>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="http://m.2339.com/" target="_self">
+                    <h5 style="color:#ff0000">夜色激情直播</h5>
+                    <p>夜深人静，老司机开夜车专用，我想静静了
+                    </p>
+                </a>
+
+            </li>
+            <li>
+                <a href="http://act.vip.xunlei.com/ugirls/wap/?t=10" target="_self">
+                    <h5>中韩美女写真录</h5>
+                    <p>各色中韩美女清纯写真合集等你来
+                    </p>
+                </a>
+
+            </li>
+            <li>
+                <a href="http://zzd.sm.cn/webapp/xiss-search?query=%E6%A8%A1%E7%89%B9%E8%A7%86%E9%A2%91" target="_self">
+                    <h5 style="color:#ff0000">中日韩欧美风</h5>
+                    <p>全球各色中日韩欧美艺术免费在线看
+                    </p>
+                </a>
+
+            </li>
+            <li>
+                <a href="http://i.7y7.com/pic/meinv/" target="_self">
+                    <h5>日系精品女生录</h5>
+                    <p>超萌超Q超美日系风格女生在线欣赏
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="http://m.v.6.cn/?referrer=baidu" target="_self">
+                    <h5 style="color:#ff0000">美女看看直播</h5>
+                    <p>在线美女火辣福利视频直播
+                    </p>
+                </a>
+
+            </li>
+            <li>
+                <a href="http://h5.9xiu.com/" target="_self">
+                    <h5>秀色秀秀美女</h5>
+                    <p>火爆在线秀秀美女视频看看
+                    </p>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+ 
+</div>
+</body>
+</html>
