@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html manifest="offline.manifest">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>
+        function connectWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) {
+                callback(WebViewJavascriptBridge)
+            } else {
+                document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                                          callback(WebViewJavascriptBridge)
+                                          }, false)
+            }
+        }
+    
+    function hello2gameAPI(data){
+        console.log(data);
+        try
+        {
+            //for WP
+            window.external.notify('AppMobiDevice~5~' + data);
+        }
+        catch(err)
+        {
+            //for IOS
+            connectWebViewJavascriptBridge(function(bridge) {
+                                           bridge.send(data, function(responseData) {
+                                                       //log('JS got response', responseData)
+                                                       })
+                                           })
+        }
+    }
+    </script>
+
+<script type="text/javascript" charset="UTF-8" src="./game_min.js"></script>
+ 
+ <style type="text/css">body			{ padding: 0px; margin: 0px; cursor: default;-webkit-user-select: none;-webkit-text-size-adjust: none;background-color:#0e0e0e }
+.root div		{ padding: 0px; margin: 0px;-webkit-box-sizing: border-box; background-repeat: no-repeat;-webkit-background-size: 100% !important; }
+.mask			{ left: 0px; top: 0px;-webkit-transition: opacity 500ms linear; z-index: 999; }
+.screen		{ width: 2048px; height: 2048px; }
+.eventmask		{ left: 0px; top: 0px; width: 100%; height: 100%; z-index: 10; }
+.animation		{-webkit-transition: opacity 200ms linear; }</style>
+		<title>台球大师</title>
+		<meta charset="utf-8">
+	<style type="text/css">.cue { background: url('./image/cuex2.png') no-repeat;-webkit-transform-origin: 50% -12px; width: 18px; height: 360px; }
+.content { color: #fff; }
+.content table { width: 100%; text-align: center; border-collapse: collapse; }
+.content table tr { height: 50px; }
+.root .AudioBtn { background: url('./image/audioBtnx2.png') no-repeat;-webkit-background-size: 400% 100% !important; }
+.root .AudioBtn.playaudio { background-position-x: -160px; }
+.root .AudioBtn.playaudio.audiotouch { background-position-x: -240px; }
+.root .AudioBtn.stopaudio { background-position-x: -0px; }
+.root .AudioBtn.stopaudio.audiotouch { background-position-x: -80px; }
+.button { background:-webkit-gradient(linear, left top, left bottom, from(#00699c), to(#00c9fc)); border: 2px solid #fff;-webkit-border-radius: 8px;-webkit-box-shadow: 2px 2px 8px rgba(0,0,0,.5); color: #fff; text-align: center; }
+.finger { background: url('./image/fingerx2.png') no-repeat; width: 210px; height: 210px; }
+.prompt { font: 28px/40px 'Georgia'; left: 50%; top: 440px; margin-left: -180px !important; color: #fff; width: 360px; padding: 8px !important;-webkit-border-radius: 20px; height: 104px; text-align: center; border: 4px solid rgba(255,255,255,.9); background: rgba(0,0,0,.4); }
+.pocket { border: 2px solid rgba(219,220,200,.8); background: rgba(4,15,21,.3);-webkit-border-radius: 14px; }
+.player1_head { background: url('./image/player1x2.png') no-repeat; left: 92px; top: 60px; width: 60px; height: 60px; }
+.player1_head.active { background: url('./image/shadow_px2.png') no-repeat, url('./image/player1x2.png') no-repeat; }
+.player2_head { background: url('./image/player2x2.png') no-repeat; right: 92px; top: 60px; width: 60px; height: 60px; }
+.player2_head.active { background: url('./image/shadow_px2.png') no-repeat, url('./image/player2x2.png') no-repeat; }
+.computer_head { background: url('./image/computerx2.png') no-repeat; right: 92px; top: 60px; width: 60px; height: 60px; }
+.computer_head.active { background: url('./image/shadow_cx2.png') no-repeat, url('./image/computerx2.png') no-repeat; }
+._8ballpvc { background: url('./image/pvcx2.png') center no-repeat; width: 160px; height: 120px; }
+._8ballpvp { background: url('./image/pvpx2.png') center no-repeat; width: 160px; height: 120px; }
+._straightp { background: url('./image/px2.png') center no-repeat; width: 120px; height: 120px; }
+._straightpvc { background: url('./image/pvcx2.png') center no-repeat; width: 160px; height: 120px; }
+._straightpvp { background: url('./image/pvpx2.png') center no-repeat; width: 160px; height: 120px; }</style><style type="text/css">.Load.root-load { visibility: hidden; width: 100%; height: 100%; background: url('./image/menux2.png') no-repeat; }
+.Unknown.root-load-title { left: 50%; top: 60px; width: 560px; margin-left: -280px; height: 220px; background: url('./image/titlex2.png') no-repeat; }
+.Unknown.root-load-progress { left: 0px; top: 400px; width: 100%; text-align: center; font: bold 40px/40px 'Georgia'; color: #00fe98; }
+.Menu.root-menu { visibility: hidden; width: 100%; height: 100%; background: url('./image/menux2.png') no-repeat; }
+.Unknown.root-menu-title { left: 50%; top: 60px; width: 560px; margin-left: -280px; height: 220px; background: url('./image/titlex2.png') no-repeat; }
+.Button.root-menu-start { left: 50%; top: 284px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Button.root-menu-htp { left: 50%; top: 356px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Button.root-menu-rule { left: 50%; top: 428px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Button.root-menu-statistic { left: 50%; top: 500px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.AudioBtn.root-menu-audio { left: 20px; top: 10px; width: 80px; height: 80px; }
+.Statistic.root-statistic { visibility: hidden; width: 100%; height: 100%; background: url('./image/menux2.png') no-repeat; }
+.Unknown.root-statistic-title { font: bold 48px/48px 'Georgia'; text-align: center; top: 80px; width: 100%; color: red; text-shadow: 4px 4px 8px rgba(0,0,0,.8);-webkit-text-stroke: 2px red;-webkit-text-fill-color: #fff; }
+.Unknown.root-statistic-mode { font: bold 28px/40px 'Georgia'; text-align: center; top: 140px; width: 100%; color: #00fe98; text-shadow: 2px 2px 4px rgba(0,0,0,.8); }
+.Unknown.root-statistic-content { left: 50%; top: 200px; width: 540px; margin-left: -270px; }
+.Button.root-statistic-prev { left: 100px; top: 300px; padding: 4px 8px 6px; }
+.Button.root-statistic-next { right: 100px; top: 300px; padding: 4px 8px 6px; }
+.Button.root-statistic-reset { left: 50%; top: 428px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Button.root-statistic-return { left: 50%; top: 500px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Rule.root-rule { visibility: hidden; width: 100%; height: 100%; background: url('./image/menux2.png') no-repeat; }
+.Unknown.root-rule-title { font: bold 48px/48px 'Georgia'; text-align: center; top: 80px; width: 100%; color: red; text-shadow: 4px 4px 8px rgba(0,0,0,.8);-webkit-text-stroke: 2px red;-webkit-text-fill-color: #fff; }
+.Unknown.root-rule-title1 { font: bold 28px/40px 'Georgia'; left: 80px; top: 160px; color: #00fe98; text-shadow: 2px 2px 4px rgba(0,0,0,.8); }
+.Unknown.root-rule-content1 { font: 28px/40px 'Georgia'; left: 80px; right: 80px; top: 220px; color: #fff; text-shadow: 0px 0px 8px rgba(0,0,0,.8); }
+.Unknown.root-rule-title2 { font: bold 28px/40px 'Georgia'; left: 80px; top: 336px; color: #00fe98; text-shadow: 2px 2px 4px rgba(0,0,0,.8); }
+.Unknown.root-rule-content2 { font: 28px/40px 'Georgia'; left: 80px; right: 80px; top: 396px; color: #fff; text-shadow: 0px 0px 8px rgba(0,0,0,.8); }
+.Button.root-rule-return { left: 50%; top: 500px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Mode.root-mode { visibility: hidden; width: 100%; height: 100%; background: url('./image/menux2.png') no-repeat; }
+.Unknown.root-mode-8ball { font: bold 28px/40px 'Georgia'; width: 100%; top: 76px; color: #00fe98; text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,.8); }
+.Unknown.root-mode-8ballbox { top: 132px; left: 50%; width: 326px; height: 128px; margin-left: -164px; border: 4px solid rgba(219,220,200,.8); background: rgba(4,15,21,.6);-webkit-box-shadow: 4px 4px 8px rgba(0,0,0,.5);-webkit-border-radius: 14px; }
+.ModeBtn.root-mode-8ballpvc { top: 136px; left: 324px; }
+.ModeBtn.root-mode-8ballpvp { top: 136px; left: 476px; }
+.Unknown.root-mode-straight { font: bold 28px/40px 'Georgia'; width: 100%; top: 284px; color: #00fe98; text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,.8); }
+.Unknown.root-mode-straightbox { top: 340px; left: 50%; width: 440px; height: 128px; margin-left: -220px; border: 4px solid rgba(219,220,200,.8); background: rgba(4,15,21,.6);-webkit-box-shadow: 4px 4px 8px rgba(0,0,0,.5);-webkit-border-radius: 14px; }
+.ModeBtn.root-mode-straightp { top: 344px; left: 270px; }
+.ModeBtn.root-mode-straightpvc { top: 344px; left: 382px; }
+.ModeBtn.root-mode-straightpvp { top: 344px; left: 534px; }
+.Button.root-mode-return { left: 50%; top: 500px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Main.root-main { visibility: hidden; width: 100%; height: 100%; background: url('./image/mainx2.jpg') no-repeat; }
+.AudioBtn.root-main-audio { left: 20px; top: 10px; width: 80px; height: 80px; }
+.Table.root-main-table {  }
+.Unknown.root-main-cue { visibility: hidden; }
+.Unknown.root-main-player1 { left: 92px; top: 60px; width: 60px; height: 60px; }
+.Pocket.root-main-player1pocket { top: 92px; left: 164px; }
+.Unknown.root-main-player2 { right: 92px; top: 60px; width: 60px; height: 60px; }
+.Pocket.root-main-player2pocket { top: 92px; right: 164px; }
+.Unknown.root-main-finger {  }
+.Unknown.root-main-prompt {  }
+.Unknown.root-main-title { left: 50%; top: 60px; width: 200px; margin-left: -100px; text-align: center; color: #fff; }
+.Unknown.root-main-msg { color:white;left: 50%; width: 400px; top: 240px; margin-left: -200px; height: 160px;border: 2px solid rgba(255,255,255,.5);-webkit-border-radius: 8px; background: rgba(0,0,0,.4);opacity:0;-webkit-transition:opacity .4s;text-align:center;vertical-align:middle }
+.Button.root-main-pauseBtn { color: #fff; right: 12px; top: 64px; width: 56px; height: 56px; line-height: 48px; font-weight: bold; font-family: Verdana; }
+.Pause.root-main-pause { visibility: hidden; width: 100%; height: 100%; }
+.Unknown.root-main-pause-frame { left: 50%; width: 560px; top: 120px; margin-left: -280px; height: 400px; border: 8px solid rgba(255,255,255,.5);-webkit-border-radius: 24px; background: rgba(0,0,0,.4); }
+.Unknown.root-main-pause-title { font: bold 48px/48px 'Georgia'; text-shadow: 4px 4px 8px rgba(0,0,0,.8); left: 50%;-webkit-text-stroke: 2px #fff; top: 170px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; text-align: center; color: #00ccff; }
+.Button.root-main-pause-continue { left: 50%; top: 260px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Button.root-main-pause-restart { left: 50%; top: 340px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Button.root-main-pause-menu { left: 50%; top: 420px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Result.root-main-result { visibility: hidden; width: 100%; height: 100%; }
+.Unknown.root-main-result-frame { left: 50%; width: 560px; top: 120px; margin-left: -280px; height: 360px; border: 8px solid rgba(255,255,255,.5);-webkit-border-radius: 24px; background: rgba(0,0,0,.4); }
+.Unknown.root-main-result-title { font: bold 48px/48px 'Georgia'; text-shadow: 4px 4px 8px rgba(0,0,0,.8); left: 50%;-webkit-text-stroke: 2px #fff; top: 170px; width: 500px; margin-left: -250px; height: 56px; line-height: 52px; text-align: center; color: #00ccff; }
+.Button.root-main-result-again { left: 50%; top: 280px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }
+.Button.root-main-result-menu { left: 50%; top: 360px; width: 320px; margin-left: -160px; height: 56px; line-height: 52px; }</style></head>
+	<body style="overflow: hidden; ">
+</body></html>
