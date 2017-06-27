@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <title>急速飙车赛</title>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" <link rel="stylesheet" type="text/css" media="screen" href="gamepage.css" />
+    <script src="scripts/Publisher.js"></script>
+    <script type="text/javascript">
+    var mode = (RegExp('bm.mode' + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1];
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.setAttribute('id', 'booster-api');
+
+    if (mode == "test") {
+        script.src = './shared/booster/api.js';
+    } else {
+        script.src = './shared/booster/api.js';
+    }
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(script, s);
+    </script>
+    <script type="text/javascript">
+    var Booster = window.Booster || {};
+
+    Booster.ready = function() {
+        window.Booster.ready = true;
+    };
+    </script>
+    <script type="text/javascript" src="./js/adbox.js"></script>
+    <script type="text/javascript" src="./js/game.js"></script>
+    <script type="text/javascript" src="./js/developer.js"></script>
+</head>
+
+<body>
+    <div class="loading_screen"></div>
+    <div class="game_screen" id="viewport" style="position:absolute; display: none; overflow:hidden">
+        <canvas id="canvasBackground" oncontextmenu="return false;" onselectstart="return false;"></canvas>
+    </div>
+    <script>
+    //setup loading screen images
+    (function() {
+        var loadingDiv = document.getElementsByClassName("loading_screen")[0];
+        var createImg = function(id, src, target) {
+            var image = document.createElement("img");
+            image.id = id;
+            image.src = src;
+            image.style.display = "none";
+            target.appendChild(image);
+        };
+        createImg("throbber_image", "big/media/throbber.png", loadingDiv);
+    }())
+    //set game parameters
+    TG_InitSettings = {
+        size: "big"
+    };
+    </script>
+    <script type="text/javascript" src="scripts/TG_PublisherSettings.js"></script>
+    <script type="text/javascript" src="big/index.js"></script>
+    <script type="text/javascript">
+    var SpilData = {
+        id: '576742227280300449' // Replace with the value you receive from Spil Games
+    };
+
+    <!-- Initialise the Spil HTML5 API -->
+    GameAPI.loadAPI(function(apiInstance) {
+        // The API is ready for use.
+        if (window.console && window.console.log) {
+            console.log('GameAPI version ' + apiInstance.version + ' loaded!');
+        }
+    }, SpilData);
+    </script>
+</body>
+
+</html>
