@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Blackjack Vegas</title>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            background-color:black;
+        }
+
+        canvas {
+            image-rendering: -o-crisp-edges;
+            image-rendering: optimize-contrast;
+            -ms-interpolation-mode: nearest-neighbor;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -moz-tap-highlight-color: rgba(0,0,0,0);
+            tap-highlight-color: rgba(0,0,0,0);
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="viewporter">
+    <canvas id="canvas" moz-opaque></canvas>
+</div>
+<script src="assets/sg.hooks.js"></script>
+
+<script src="softgames_game.js"></script>
+<script src="gameConfig.js"></script>
+<script src ="js/index.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+</body>
+
+</html>
